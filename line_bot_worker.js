@@ -2,7 +2,7 @@ addEventListener("fetch", (event) => {
   event.respondWith(handleRequest(event.request));
 });
 
-const CLOUD_FLARE_API_URL = ENV.CLOUD_FLARE_API_URL;
+const CLOUDFLARE_API_URL = ENV.CLOUDFLARE_API_URL;
 const CLOUDFLARE_API_TOKEN = ENV.CLOUDFLARE_API_TOKEN;
 
 async function handleRequest(request) {
@@ -14,7 +14,7 @@ async function handleRequest(request) {
     const requestBody = await request.json();
     const prompt = requestBody.prompt || "default prompt";
 
-    const url = CLOUD_FLARE_API_URL;
+    const url = CLOUDFLARE_API_URL;
 
     const payload = JSON.stringify({
       prompt: prompt,
