@@ -25,4 +25,4 @@ jobs:
       env:
         CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         CLOUDFLARE_API_URL: ${{ secrets.CLOUDFLARE_API_URL }}
-      run: npx wrangler publish worker.js
+      run: npx wrangler publish line_bot_worker.js
